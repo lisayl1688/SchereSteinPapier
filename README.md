@@ -1,31 +1,46 @@
-# React + TypeScript + Vite
+# Rock, Paper, Scissors Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ![Preview screenshot](./src/assets/preview_RockPaperScissors.png)
+> ![Preview screenshot](./src/assets/preview_RockPaperScissorsDark.png)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+This application is a simple implementation of the classic Rock, Paper, Scissors game. Users can choose their weapon, and the computer will randomly select its own. The result of the match is displayed along with the current score.
 
-## Expanding the ESLint configuration
+## Features
+- **Choose Your Weapon:** Select Rock, Paper, or Scissors.
+- **Random CPU Weapon:** The computer randomly selects a weapon.
+- **Display Result:** Shows the result of each match (win, lose, or draw).
+- **Score Tracking:** Keeps track of wins, losses, and draws.
+- **Dark Mode:** Toggle between dark and light modes.
+- **Responsive Design:** Fully responsive and works on all devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
+1. **Start Application:**
+   - The application is ready to play upon load.
 
-- Configure the top-level `parserOptions` property like this:
+2. **Choose Your Weapon:**
+   - Click on the Rock, Paper, or Scissors image to select your weapon.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. **See the Result:**
+   - The result of the match will be displayed, showing your choice, the computer's choice, and the outcome.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# SchereSteinPapier
+4. **Track Your Score:**
+   - The application tracks and displays your wins, losses, and draws.
+
+5. **Toggle Dark Mode:**
+   - Use the switch in the top right corner to toggle between dark and light modes.
+
+## Components
+- **Weapon Selection:** Images for selecting Rock, Paper, or Scissors.
+- **Result Display:** Shows the result of the current match.
+- **Score Display:** Displays the current score of wins, losses, and draws.
+- **Dark Mode Toggle:** Switch to toggle between dark and light modes.
+
+## Live Demo
+Try the application live: [Rock, Paper, Scissors](https://scheresteinpapier1688.netlify.app)
+
+## License
+Licensed under the MIT License.
+
+Enjoy playing Rock, Paper, Scissors! If you have any questions or feedback, feel free to open an issue. Happy coding!
