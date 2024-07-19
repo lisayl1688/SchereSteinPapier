@@ -3,6 +3,9 @@ import Dark from "../components/dark/Dark";
 import papier from "../assets/img/papier.png"
 import stein from "../assets/img/stein.png"
 import schere from "../assets/img/schere.png"
+import Hintergrund from "../assets/img/Hintergrund.png"
+
+
 
 
 const Home = () => {
@@ -12,6 +15,11 @@ const Home = () => {
         const [weapon, setWeapon] = useState<string>("");
         const [cpuWeapon, setCpuWeapon] = useState<string>("");
         const [fightResult, setFightResult] = useState<string>("");
+
+        const [countWin, setCountWin] = useState<number>(0);
+        const [countLose, setCountLose] = useState<number>(0);
+        const [countDraw, setCountDraw] = useState<number>(0);
+
     
         useEffect(() => {
             if (weapon) {
@@ -34,14 +42,17 @@ const Home = () => {
             if (weapon === cpuWeapon) {
                 console.log("unentschieden");
                 setFightResult("knapper kampf! UNENTSCHIEDEN");
+                setCountDraw(countDraw+1)
             } else if (
                 (weapon === "schere" && cpuWeapon === "papier") ||
                 (weapon === "stein" && cpuWeapon === "schere") ||
                 (weapon === "papier" && cpuWeapon === "stein")
             ) {
                 setFightResult("Stolz gekämpft! Du hast gewonnen!");
+                setCountWin(countWin+1)
             } else {
                 setFightResult("Du hast verloren...gib nicht auf!");
+                setCountLose(countLose+1)
             }
         }
 
@@ -51,9 +62,9 @@ const Home = () => {
     
         return (
             <>
-            <img  className="hintergrund" src="./src/assets/img/Hintergrund.png" alt="" />
-            <div className="mainPart">
                 <div className={`${dark && "darkLightMode"}`}>
+            <img  className="hintergrund" src={Hintergrund} alt="" />
+            <div className="mainPart">
                     <div className="headWrapper">
                         <div className="top">
                             <h1>Rock, Paper, Scissors - are you lucky?</h1>
@@ -63,10 +74,17 @@ const Home = () => {
                             <Dark dark={dark} setDark={setDark}/>
                         </div>
                     </div>
-                    <div className="resultOutput">
-                        <p>You chose: <span>{weapon}</span></p>
-                        <p>Enemy chose: <span>{cpuWeapon}</span></p>
-                        <p>Result: <span>{fightResult}</span></p>
+                    <div className="resultScoreWrapper">
+                        <div className="resultOutput">
+                            <p>You chose: <span>{weapon}</span></p>
+                            <p>Enemy chose: <span>{cpuWeapon}</span></p>
+                            <p>Result: <span>{fightResult}</span></p>
+                        </div>
+                        <div className="HightScore">
+                            <p>Aktuelle Siege:{countWin}</p>
+                            <p>Aktuelle Niederlagen: {countLose}</p>
+                            <p>Aktuelle Unentschieden:{countDraw}</p>
+                        </div>
                     </div>
                     <div>
                         <button className="resetButton" onClick={resetGame}>Reset</button>
