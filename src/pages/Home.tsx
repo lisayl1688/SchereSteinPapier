@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import Dark from "../components/dark/Dark";
+import papier from "../assets/img/papier.png"
+import stein from "../assets/img/stein.png"
+import schere from "../assets/img/schere.png"
+
 
 const Home = () => {
 
@@ -69,17 +73,17 @@ const Home = () => {
                     </div>
                     <section className="waffen">
                         <div className="weapon-container" onClick={() => setMyWeapon("schere")} style={{ cursor: 'pointer', position: 'relative' }}>
-                            <img className="schere" src="./src/assets/img/schere.png" alt="schere" />
-                            <img className="schereSchatten" src="./src/assets/img/schere.png" alt="schere" />
+                            <img className="schere" src={schere} alt="schere" />
+                            <img className="schereSchatten" src={schere} alt="schere" />
                         </div>
                         <div className="weapon-container" onClick={() => setMyWeapon("stein")} style={{ cursor: 'pointer', position: 'relative' }}>
-                            <img className="stein" src="./src/assets/img/stein.png" alt="schere" />
-                            <img className="steinSchatten" src="./src/assets/img/stein.png" alt="schere" />
+                            <img className="stein" src={stein} alt="schere" />
+                            <img className="steinSchatten" src={stein} alt="schere" />
 
                         </div>
                         <div className="weapon-container" onClick={() => setMyWeapon("papier")} style={{ cursor: 'pointer', position: 'relative' }}>
-                            <img className="papier" src="./src/assets/img/papier.png" alt="schere" />
-                            <img className="papierSchatten" src="./src/assets/img/papier.png" alt="schere" />
+                            <img className="papier" src={papier} alt="schere" />
+                            <img className="papierSchatten" src={papier} alt="schere" />
 
                         </div>
                     </section>
