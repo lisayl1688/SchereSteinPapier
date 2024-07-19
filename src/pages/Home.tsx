@@ -81,9 +81,9 @@ const Home = () => {
                             <p>Result: <span>{fightResult}</span></p>
                         </div>
                         <div className="HightScore">
-                            <p>Aktuelle Siege:{countWin}</p>
-                            <p>Aktuelle Niederlagen: {countLose}</p>
-                            <p>Aktuelle Unentschieden:{countDraw}</p>
+                            <p>Aktuelle Siege: <span>{countWin}</span></p>
+                            <p>Aktuelle Niederlagen: <span>{countLose}</span></p>
+                            <p>Aktuelle Unentschieden: <span>{countDraw}</span></p>
                         </div>
                     </div>
                     <div>
