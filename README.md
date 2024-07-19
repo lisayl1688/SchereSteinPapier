@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors Game
 
-> ![Preview screenshot](./src/assets/preview_RockPaperScissors.png)
-> ![Preview screenshot](./src/assets/preview_RockPaperScissorsDark.png)
+> ![Preview screenshot](./src/assets/img/preview_RockPaperScissors.png)
+> ![Preview screenshot](./src/assets/img/preview_RockPaperScissorsDark.png)
 
 
 ## Overview
